@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/app.css" />
+    <title>Balise Image</title>
+  </head>
+  <body>
+    <h1>Les images en Html5</h1>
+
+    <div>
+      <!-- 
+       IMAGE RWD
+      srcset: le choix des différentes source d'image selon la taille imposé
+      sizes: liste des point de changement d'image en px ou vw.
+      -->
+      <h2>IMG</h2>
+      <img
+        class="image-size"
+        src="./assets/imgs/01.jpg"
+        srcset="./assets/imgs/02.jpg 2x"
+        alt="ceci est l'image de cela"
+        sizes="(max-width: 600px) 200px, 50vw"
+        role="img"
+        title="titre de l'image vissible au survol"
+      />
+    </div>
+
+    <div>
+      <!--
+      
+     -->
+      <h2>PICTURE</h2>
+      <picture>
+        <source
+          srcset="./assets/imgs/02.jpg 200w, ./assets/imgs/02.jpg 50vw  "
+          media="(orientation: portrait)"
+        />
+        <img src="/media/cc0-images/painted-hand-298-332.jpg" alt="…" />
+      </picture>
+    </div>
+    <div>
+      <!--
+      FIGURE: 
+       Toujours utiliser pour la direction artistique
+     -->
+      <figure>
+        <img src="./assets/imgs/03.jpg" alt="…" class="image-size" />
+        <img
+          srcset="
+            ./assets/imgs/03.jpg 200w,
+            ./assets/imgs/03.jpg 400w,
+            ./assets/imgs/03.jpg,
+            600w
+          "
+          alt="…"
+          class="image-size"
+        />
+        <figcaption>La légende</figcaption>
+      </figure>
+      <figure>
+        <p style="white-space: pre">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet nemo
+          adipisci reprehenderit veniam velit illo non vitae reiciendis amet
+          vel? Quia cupiditate architecto facilis quasi quo optio, aperiam nisi
+          consequuntur?
+        </p>
+        <figcaption>author</figcaption>
+      </figure>
+    </div>
+  </body>
+</html>
